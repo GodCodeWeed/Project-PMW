@@ -23,7 +23,7 @@ final slideList = [
       description:
           'Looking for a Job to get done? not worry at Hustle we have thousands of expirienced professionals, who can get the job done in a jiphy.'),
   SlideModel(
-      imageUrl: 'assets/Images/image3.jpeg',
+      imageUrl: 'assets/Images/image3.jpg',
       title: 'Show Us your Hustle.',
       description:
           'The world has been waiting for your hustle now the time for you show it to the whole world, whatever it is, theres somoene out there in need of your services.'),
