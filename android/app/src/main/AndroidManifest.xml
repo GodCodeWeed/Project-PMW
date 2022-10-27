@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jop_swipper">
+    package="com.PMW.job_swipper">
    <application
         android:label="jop_swipper"
         android:name="${applicationName}"

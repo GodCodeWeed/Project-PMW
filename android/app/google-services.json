@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "423053435857",
+    "project_id": "jobs-swipes",
+    "storage_bucket": "jobs-swipes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423053435857:android:7a095f9cfa8f6d214176f0",
+        "android_client_info": {
+          "package_name": "com.PMW.job_swipper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423053435857-ivvu4um4drmuj1710sm7004q3bg9sluj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOwB-7vs_nvUZaZlFFgdFlsXMOHaIE6NY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423053435857-ivvu4um4drmuj1710sm7004q3bg9sluj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
