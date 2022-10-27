@@ -1,4 +1,4 @@
-package com.example.jop_swipper
+package com.PMW.job_swipper
 
 import io.flutter.embedding.android.FlutterActivity
 
