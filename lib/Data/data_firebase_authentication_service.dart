@@ -29,4 +29,15 @@ class FireBaseAuthentication
   }
 return null;
   }
+
+  Future<User?> loginAsync(String email, String password) async {
+    final User? user = (await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password)
+    ).user;
+
+    if (user != null) {
+      return user;
+    }
+    return null;
+  }
+
 }
