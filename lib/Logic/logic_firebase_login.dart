@@ -57,7 +57,7 @@ class LoginFirebaseLogic
     if (event is LoginFirebaseEvent) {
       try {
         emit(LoginFirebaseLoading());
-        var response = await _fireBaseAuthentication.LoginAsync(
+        var response = await _fireBaseAuthentication.loginAsync(
             event.email, event.password);
 
         if (response != null) {

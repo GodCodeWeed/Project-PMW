@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../Data/data_firebase_authentication_service.dart';
-import '../../Interface/IScreen.dart';
 import '../../Logic/logic_firebase_signup.dart';
 import '../../Utility/DependencyInjection/dependencyInjection.dart';
+import '../../Utility/ScreenNavigation/screenNavigation_functions.dart';
+import '../../Utility/ScreenNavigation/screenNavigation_names.dart';
 import '../Texts/text_custom.dart';
 import '../Widgets/AppBar/appbar_basic.dart';
 import '../Widgets/Buttons/button_raised.dart';
@@ -102,7 +103,9 @@ class SignUpScreen extends StatelessWidget  {
                               child: ButtonRaised(
                                 pressed: () 
                                 {
-                                  logic.add(SignUpFirebaseEvent(confirmPassword: confirmPasswordController.text,password: passwordController.text,email: emailController.text));
+                                          ScreenNavigationFunctions.instance
+                          .navigateTo(ScreenNavigationNames.onboardingScreen);
+                                 // logic.add(SignUpFirebaseEvent(confirmPassword: confirmPasswordController.text,password: passwordController.text,email: emailController.text));
                                 },
                                 buttonTitle: "Sign up",
                               ),

@@ -105,7 +105,7 @@ _timerMotion()
             ButtonFlat(
               pressed: ()
               {
- ScreenNavigationFunctions.instance.navigateTo(ScreeNavigationNames.loginScreen);
+ ScreenNavigationFunctions.instance.navigateTo(ScreenNavigationNames.loginScreen);
               },
                             buttonTitle: "Get started",
                           

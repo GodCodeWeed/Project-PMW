@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jop_swipper/UI/Screens/screen_onboarding.dart';
 import 'UI/Screens/screen_landing.dart';
 import 'UI/Screens/screen_login.dart';
 import 'UI/Screens/screen_signup.dart';
@@ -25,11 +26,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: ScreenNavigationFunctions.instance.navigationKey,
-      initialRoute: ScreeNavigationNames.landingScreen,
+      initialRoute: ScreenNavigationNames.landingScreen,
       routes: {
-ScreeNavigationNames.loginScreen:(BuildContext context) =>LoginScreen(),
-ScreeNavigationNames.signupScreen:(BuildContext context) =>SignUpScreen(),
-ScreeNavigationNames.landingScreen:(BuildContext context) =>LandingScreen(),
+ScreenNavigationNames.loginScreen:(BuildContext context) =>LoginScreen(),
+ScreenNavigationNames.signupScreen:(BuildContext context) =>SignUpScreen(),
+ScreenNavigationNames.landingScreen:(BuildContext context) =>LandingScreen(),
+ScreenNavigationNames.onboardingScreen:(BuildContext context) => OnboardingScreen()
       },
       theme: CustomTheme.lightTheme,
       debugShowCheckedModeBanner: false,
