@@ -20,9 +20,12 @@ class FileUploadFirebaseBaseState extends Equatable {
 class FileUploadFirebaseEvent extends FileUploadFirebaseBaseEvent {
   final XFile? file;
   final String email;
-
+   final String? role;
+   final String? expirience;
   FileUploadFirebaseEvent(
       {required this.file,
+      required this.role,
+      required this.expirience,
        required this.email
       });
 }
@@ -36,6 +39,25 @@ class FileSelectedEvent extends FileUploadFirebaseBaseEvent {
       });
 }
 
+
+class RoleSelectedEvent extends FileUploadFirebaseBaseEvent {
+  final String? role;
+
+
+  RoleSelectedEvent(
+      {required this.role,
+      });
+}
+class ExpirienceSelectedEvent extends FileUploadFirebaseBaseEvent {
+  final String? expirience;
+
+
+  ExpirienceSelectedEvent(
+      {required this.expirience,
+      });
+}
+
+
 class FileUploadFirebaseLoading extends FileUploadFirebaseBaseState {}
 class FileUploadFirebaseIniated extends FileUploadFirebaseBaseState {}
 class FileSelected extends FileUploadFirebaseBaseState 
@@ -46,6 +68,33 @@ class FileSelected extends FileUploadFirebaseBaseState
   FileSelected(
       {required this.file,
       });
+}
+
+class ExpirienceSelected extends FileUploadFirebaseBaseState 
+{
+    final String? expirience;
+
+
+  ExpirienceSelected(
+      {required this.expirience,
+      });
+
+        @override
+  // TODO: implement props
+  List<Object> get props => [];
+}
+class RoleSelected extends FileUploadFirebaseBaseState 
+{
+    final String? role;
+
+
+  RoleSelected(
+      {required this.role,
+      });
+
+        @override
+  // TODO: implement props
+  List<Object> get props => [];
 }
 
 class FileNotSelected extends FileUploadFirebaseBaseState {}
@@ -76,6 +125,20 @@ class FileUploadFirebaseLogic
     Emitter<FileUploadFirebaseBaseState> emit,
   ) async {
 
+    if(event is ExpirienceSelectedEvent)
+    {
+           emit(FileUploadFirebaseLoading());
+      String? expirience =  event.expirience;
+          await Future<void>.delayed(const Duration(milliseconds: 50));
+     emit(ExpirienceSelected(expirience: expirience));
+    }
+    if(event is RoleSelectedEvent)
+    {
+           emit(FileUploadFirebaseLoading());
+      String? role =  event.role;
+          await Future<void>.delayed(const Duration(milliseconds: 50));
+     emit(RoleSelected(role: role));
+    }
     if(event is FileSelectedEvent)
     {
       var picker = ImagePicker();
@@ -92,7 +155,7 @@ class FileUploadFirebaseLogic
     if (event is FileUploadFirebaseEvent) {
       try {
         emit(FileUploadFirebaseLoading());
-        var response = await _fireBaseStorage.uploadResumeAsync(event.email, event.file);
+        var response = await _fireBaseStorage.uploadResumeAsync(event.email, event.file, event.role, event.expirience);
 
         if (response == true) {
           emit(FileUploadFirebaseSuccess());

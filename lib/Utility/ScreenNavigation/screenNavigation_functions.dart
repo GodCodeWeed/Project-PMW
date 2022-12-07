@@ -15,6 +15,11 @@ return navigationKey.currentState!.pushReplacementNamed(_rn);
  Future<dynamic> navigateTo(String _rn){
    return navigationKey.currentState!.pushNamed(_rn);
   }
+
+   Future<dynamic> navigateToWithObject(String _rn,Object obj){
+   return navigationKey.currentState!.pushNamed(_rn, arguments: obj);
+  }
+
  Future<dynamic> navigateToRoute(MaterialPageRoute _rn){
    return navigationKey.currentState!.push(_rn);
   }

@@ -1,14 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
-
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../Data/data_firebase_authentication_service.dart';
 import '../../Data/data_firebase_storage_service.dart';
 
 GetIt locator = GetIt.instance;
+enum Swipe { left, right, none }
 void setupLocator() async 
 {
   locator.registerSingleton(FirebaseAuth.instance);
+  // locator.registerSingleton(FirebaseFirestore.instance);
   locator.registerSingleton(FirebaseStorage.instance);
   locator.registerFactory<FireBaseAuthentication>(
      () =>FireBaseAuthentication());

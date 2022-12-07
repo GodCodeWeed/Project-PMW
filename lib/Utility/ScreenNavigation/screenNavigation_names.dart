@@ -5,4 +5,5 @@ class ScreenNavigationNames
   static const dashboardScreen = "DashboardScreen";
   static const landingScreen = "LandingScreen";
   static const onboardingScreen = "OnboardingScreen";
+  static const swipeScreen = "SwipeScreen";
 }

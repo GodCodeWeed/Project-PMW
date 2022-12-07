@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jop_swipper/UI/Screens/screen_onboarding.dart';
+import 'package:jop_swipper/UI/Screens/screen_swipe.dart';
 import 'UI/Screens/screen_landing.dart';
 import 'UI/Screens/screen_login.dart';
 import 'UI/Screens/screen_signup.dart';
@@ -10,9 +11,9 @@ import 'Utility/ScreenNavigation/screenNavigation_names.dart';
 import 'package:firebase_core/firebase_core.dart';
 //git config --global user.name "holaryiwola"
 void main() async{
- 
+    WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-   WidgetsFlutterBinding.ensureInitialized();
+
  
  setupLocator();
 
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
 ScreenNavigationNames.loginScreen:(BuildContext context) =>LoginScreen(),
 ScreenNavigationNames.signupScreen:(BuildContext context) =>SignUpScreen(),
 ScreenNavigationNames.landingScreen:(BuildContext context) =>LandingScreen(),
-ScreenNavigationNames.onboardingScreen:(BuildContext context) => OnboardingScreen()
+ScreenNavigationNames.onboardingScreen:(BuildContext context) => OnboardingScreen(),
+ScreenNavigationNames.swipeScreen:(BuildContext context) => SwipeScreen(),
       },
       theme: CustomTheme.lightTheme,
       debugShowCheckedModeBanner: false,
