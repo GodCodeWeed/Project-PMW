@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:jop_swipper/UI/Texts/text_custom.dart';
+import 'package:jop_swipper/UI/Widgets/AppBar/appbar_basic.dart';
+import 'package:jop_swipper/UI/Widgets/Buttons/button_raised.dart';
+import 'package:jop_swipper/UI/Widgets/Icons/icon_custom.dart';
+import 'package:jop_swipper/UI/Widgets/TextFields/textfield_custom.dart';
 import '../../Data/data_firebase_authentication_service.dart';
 import '../../Logic/logic_firebase_login.dart';
 import '../../Utility/DependencyInjection/dependencyInjection.dart';
 import '../../Utility/ScreenNavigation/screenNavigation_functions.dart';
 import '../../Utility/ScreenNavigation/screenNavigation_names.dart';
-import '../Texts/text_custom.dart';
-import '../Widgets/AppBar/appbar_basic.dart';
-import '../Widgets/Buttons/button_raised.dart';
-import '../Widgets/Icons/icon_custom.dart';
-import '../Widgets/TextFields/textfield_custom.dart';
+
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
